@@ -1,0 +1,47 @@
+@import './variables';
+
+// Navbar & Footer Styles
+#app {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		padding: 1.5rem;
+		.logo {
+			color: $black;
+		}
+		.links {
+			display: flex;
+			ul.page-links {
+				display: flex;
+				padding: 0 3rem 0 0;
+				li {
+					color: $grey;
+					text-transform: uppercase;
+					margin-right: 1rem;
+					padding-bottom: 0.25rem;
+					&.active {
+						color: $agreen;
+						border-bottom: 2px solid $agreen;
+					}
+					&:last-of-type {
+						margin: 0;
+					}
+				}
+			}
+			ul.icon-links {
+				display: flex;
+				li {
+					border-left: 1px solid $lightGrey;
+					padding: 0 1rem;
+					i {
+						font-size: 0.825rem;
+						color: $grey;
+					}
+				}
+			}
+		}
+	}
+	footer {
+
+	}
+}

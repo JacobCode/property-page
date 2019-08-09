@@ -1,0 +1,793 @@
+
+@import './reset';
+@import './layout';
+
+body {
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+#app {
+	background: white;
+	// Preview Section
+	#preview {
+		padding: 0 1.5rem 1.5rem 1.5rem;
+		main {
+			background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+			background-size: cover;
+			background-position: center;
+			height: calc(100vh - 5.5rem);
+			margin-bottom: 1.5rem;
+			position: relative;
+			.details {
+				position: absolute;
+				left: 20%;
+				top: 50%;
+				background: white;
+				border-radius: 0 12rem 12rem 0;
+				padding: 2rem 2.5rem;
+				transform: translateY(-50%);
+				-webkit-box-shadow: 0px 0px 0px 23px rgba(179, 179, 179, 0.2);
+				-moz-box-shadow: 0px 0px 0px 23px rgba(179, 179, 179, 0.2);
+				box-shadow: 0px 0px 0px 23px rgba(179, 179, 179, 0.2);
+				h1 {
+					margin-bottom: 0.825rem;
+					color: $black;
+					font-weight: 300;
+					font-size: 2rem;
+				}
+				p {
+					color: $agrey;
+					font-weight: 300;
+					margin-bottom: 2rem;
+				}
+				.info {
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					margin-bottom: 1.5rem;
+					.col {
+						border-right: 1px solid $lightGrey;
+						padding: 0 1.5rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						&:first-of-type {
+							padding: 0 1.5rem 0 0;
+						}
+						&:last-of-type {
+							border: none;
+							padding: none;
+						}
+						h6 {
+							margin-bottom: 0.5rem;
+							color: $agreen;
+							font-size: 1.825rem;
+						}
+						span {
+							color: $agrey;
+							font-weight: 300;
+						}
+					}
+				}
+				h5 {
+					font-style: italic;
+					color: $black;
+					font-weight: 600;
+					font-size: 2.5rem;
+				}
+			}
+		}
+		.preview-boxes {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 1.5rem;
+			grid-template-rows: 250px;
+			.pic {
+				background-size: cover !important;
+				background-repeat: no-repeat !important;
+				background-position: center !important;
+				position: relative;
+				&.one {
+					background: url('http://italstroy.ru/800/600/http/prointerior.info/wp-content/uploads/eco_22.jpg');
+				}
+				&.two {
+					background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+				}
+				&.three {
+					background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+				}
+				.room-type {
+					background: $agreen;
+					position: absolute;
+					right: 0;
+					height: 50px;
+					width: 50px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					z-index: 100;
+					border-radius: 0 0 0 1rem;
+					i {
+						color: white;
+					}
+				}
+				.details {
+					background: rgba(0, 0, 0, 0.85);
+					position: absolute;
+					right: 0;
+					height: 100%;
+					width: 45%;
+					position: absolute;
+					.text {
+						position: absolute;
+						bottom: 0;
+						padding: 1.5rem;
+						h3 {
+							color: white;
+							margin-bottom: 0.25rem;
+							font-weight: 300;
+						}
+						h6 {
+							color: white;
+							margin-bottom: 0.825rem;
+							font-weight: 300;
+							font-size: 0.825rem;
+							b {
+								font-weight: 600;
+								color: white;
+							}
+						}
+						a {
+							color: $agreen;
+							font-size: 0.75rem;
+							text-transform: uppercase;
+							font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+	}
+	// Summary Section
+	#summary {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5rem 2.5rem;
+		summary {
+			width: 50%;
+			padding-right: 2.5rem;
+			h2 {
+				font-size: 2.5rem;
+				padding-bottom: 2.5rem;
+				color: $black;
+			}
+			p {
+				padding-bottom: 3.5rem;
+				line-height: 1.8;
+				font-weight: 300;
+				color: $agrey;
+			}
+			a {
+				color: $agreen;
+				border: 2px solid $agreen;
+				padding: 0.825rem 1rem;
+				text-transform: uppercase;
+				font-size: 0.825rem;
+				font-weight: 600;
+			}
+		}
+		.rooms {
+			width: 50%;
+			display: grid;
+			grid-template-columns: repeat(3, 33%);
+			padding-left: 2.5rem;
+			.room {
+				border-left: 1px solid $lightGrey;
+				border-top: 1px solid $lightGrey;
+				height: 200px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				&:nth-child(3), &:nth-child(6) {
+					border-right: 1px solid $lightGrey;
+				}
+				&:nth-child(4), &:nth-child(5), &:nth-child(6) {
+					border-bottom: 1px solid $lightGrey;
+				}
+				i {
+					margin-bottom: 0.825rem;
+					color: $agreen;
+				}
+				p {
+					margin-bottom: 0.825rem;
+					font-size: 1.1rem;
+					font-weight: 300;
+					color: $agrey;
+				}
+				span {
+					font-size: 2rem;
+					color: $black;
+				}
+			}
+		}
+	}
+	// Features Section
+	#features {
+		background: $agrey;
+		display: flex;
+		.carousel {
+			width: 50%;
+			background-image: url('https://zanimmobiliare.it/images/resource/image-3.jpg');
+			background-size: cover;
+			background-position: center;
+			min-height: 100%;
+			position: relative;
+			.carousel-controller {
+				display: flex;
+				position: absolute;
+				width: 100px;
+				height: 30px;
+				bottom: 1rem;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 100px;
+				align-items: center;
+				justify-content: center;
+				div {
+					height: 10px;
+					width: 10px;
+					border-radius: 50%;
+					background: white;
+					margin-right: 1rem;
+					&:last-of-type {
+						margin: 0;
+					}
+					&.active {
+						background: $agreen;
+					}
+				}
+			}
+		}
+		.features {
+			width: 50%;
+			padding: 5rem;
+			.steps {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				justify-content: space-between;
+				position: relative;
+				margin-bottom: 3.5rem;
+				.line {
+					width: calc(100% - 33%);
+					position: absolute;
+					background: #363636;
+					height: 1px;
+					top: 25%;
+					z-index: 1;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.step {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					justify-content: center;
+					position: relative;
+					z-index: 100;
+					&.active {
+						h3 {
+							background: $agreen;
+							border-color: transparent;
+							color: white;
+						}
+						span {
+							color: $agreen;
+						}
+					}
+					h3 {
+						border-radius: 50%;
+						height: 30px;
+						width: 30px;
+						margin-bottom: 1rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border: 1px solid #363636;
+						background: $black;
+						color: $lightGrey;
+						font-weight: 400;
+					}
+					span {
+						color: $lightGrey;
+						font-weight: 300;
+					}
+				}
+			}
+			.info {
+				h1 {
+					color: white;
+					font-size: 2rem;
+					margin-bottom: 2rem;
+				}
+				p {
+					color: $lightGrey;
+					line-height: 1.5;
+					margin-bottom: 2rem;
+					font-weight: 300;
+				}
+				ul {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-row-gap: 1rem;
+					list-style: none;
+					li {
+						color: $lightGrey;
+						font-weight: 600;
+						font-size: 1rem;
+						display: flex;
+						align-items: center;
+					}
+					li::before {
+						content: "\2022";
+						color: $agreen;
+						/* Change the color */
+						font-weight: bold;
+						display: inline-block;
+						width: 1.5rem;
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+	// Photo Gallery Section
+	#gallery {
+		padding: 5rem 3.5rem;
+		display: flex;
+		.gallery-options {
+			width: 30%;
+			h1 {
+				color: $black;
+				font-size: 2.5rem;
+				margin-bottom: 3.5rem;
+			}
+			.controller {
+				margin-bottom: 3.5rem;
+				display: flex;
+				flex-direction: column;
+				span {
+					padding: 1rem;
+					border-left: 2px solid $lightGrey;
+					color: $agrey;
+					font-weight: 300;
+					&.active {
+						border-color: $agreen;
+						color: $agreen;
+					}
+				}
+			}
+			a {
+				color: $agreen;
+				border: 2px solid $agreen;
+				padding: 0.825rem 1rem;
+				text-transform: uppercase;
+				font-size: 0.825rem;
+				font-weight: 600;
+			}
+		}
+		.gallery-images {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 150px 150px 150px 150px;
+			grid-gap: 1.5rem;
+			width: 70%;
+			max-width: 800px;
+			margin: 0 0 0 auto;
+			.image {
+				background-size: cover !important;
+				background-position: center !important;
+				background-repeat: no-repeat !important;
+				min-height: 100%;
+				&:nth-child(1) {
+					grid-row: 1 / 3;
+					grid-column: 1 / 2;
+					background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+				}
+				&:nth-child(2) {
+					grid-row: 1 / 3;
+					grid-column: 2 / 4;
+					background-image: url('http://www.clean2sparkle.com/admin/images/slider/image20180523082713.jpg');
+				}
+				&:nth-child(3) {
+					grid-row: 3 / 4;
+					grid-column: 1 / 2;
+					background: url('https://data.whicdn.com/images/56044769/large.jpg');
+				}
+				&:nth-child(4) {
+					grid-row: 4 / 5;
+					grid-column: 1 / 2;
+					background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+				}
+				&:nth-child(5) {
+					grid-row: 3 / 5;
+					grid-column: 2 / 4;
+					background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+				}
+			}
+		}
+	}
+	// Contact Section
+	#contact {
+		background: $agreen;
+		padding: 5rem 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		.logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+		}
+		p {
+			line-height: 1.5;
+			color: $agrey;
+			font-weight: 300;
+		}
+		.link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			a {
+				color: $agreen;
+				background: white;
+				padding: 0.825rem 1rem;
+				text-transform: uppercase;
+				font-size: 0.825rem;
+				font-weight: 600;
+			}
+		}
+	}
+	// About Section
+	#about {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 5rem 0;
+		background: #f8f8f8;
+		h1 {
+			font-size: 2.5rem;
+			color: $black;
+			margin-bottom: 5rem;
+		}
+		.agent {
+			display: flex;
+			flex-direction: row;
+			.agent-image {
+				width: calc(45% - 2.5rem);
+				display: flex;
+				justify-content: flex-end;
+				img {
+					max-width: 200px;
+					max-height: 200px;
+
+				}
+			}
+			.agent-info {
+				width: calc(55% - 2.5rem);
+				padding-left: 2.5rem;
+				h6 {
+					color: $black;
+					font-size: 1.5rem;
+					margin-bottom: 0.825rem;
+				}
+				p {
+					&.role {
+						color: #c4c4c4;
+						margin-bottom: 1.5rem;
+						font-weight: 300;
+					}
+					&.desc {
+						margin-bottom: 1.5rem;
+						color: $agrey;
+						line-height: 1.5;
+						font-weight: 300;
+					}
+					&.phone {
+						font-weight: 300;
+						color: $black;
+						margin-bottom: 0.25rem;
+					}
+					&.email {
+						font-weight: 300;
+						color: $black;
+						margin-bottom: 1.5rem;
+					}
+				}
+				.socials {
+					margin-bottom: 3rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100px;
+					justify-content: space-between;
+					i {
+						color: $agrey;
+					}
+				}
+				a {
+					color: $agreen;
+					border: 2px solid $agreen;
+					padding: 0.825rem 1rem;
+					text-transform: uppercase;
+					font-size: 0.825rem;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	// Blog Section
+	#blog {
+		padding: 5rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		h1 {
+			font-size: 2.5rem;
+			color: $black;
+			margin-bottom: 3.5rem;
+		}
+		.posts {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			max-width: 900px;
+			margin-bottom: 3.5rem;
+			.post {
+				display: flex;
+				flex-direction: column;
+				&.one {
+					.image {
+						background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+					}
+				}
+				&.two {
+					.image {
+						background: url('https://data.whicdn.com/images/56044769/large.jpg');
+					}
+				}
+				&.three {
+					.image {
+						background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+					}
+				}
+				&:nth-child(even) {
+					flex-direction: column-reverse;
+				}
+				.image {
+					background-size: cover !important;
+					background-position: center !important;
+					background-repeat: no-repeat;
+					height: 250px;
+				}
+				.info {
+					height: 250px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					padding: 1.5rem;
+					background: #f8f8f8;
+					h4 {
+						font-size: 1.25rem;
+						color: #575757;
+						font-weight: 400;
+						margin-bottom: 0.25rem;
+					}
+					span {
+						color: #b8b8b8;
+						font-weight: 300;
+						margin-bottom: 1.5rem;
+						font-size: 0.825rem;
+					}
+					p {
+						margin-bottom: 1rem;
+						line-height: 1.5;
+						color: $agrey;
+						font-weight: 300;
+						font-size: 0.825rem;
+					}
+					a {
+						border: none;
+						padding: 0;
+					}
+				}
+			}
+		}
+		a {
+			color: $agreen;
+			border: 2px solid $agreen;
+			padding: 0.825rem 1rem;
+			text-transform: uppercase;
+			font-size: 0.825rem;
+			font-weight: 600;
+		}
+	}
+	// Map Section
+	#map {
+		background-size: cover !important;
+		background-position: center;
+		background-repeat: no-repeat;
+		background: url('../images/map.png');
+		min-height: 60vh;
+		position: relative;
+		.location {
+			background: white;
+			position: absolute;
+			right: 15%;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 2.5rem;
+			-webkit-box-shadow: 0px 0px 24px -9px rgba(138, 138, 138, 0.7);
+			-moz-box-shadow: 0px 0px 24px -9px rgba(138, 138, 138, 0.7);
+			box-shadow: 0px 0px 24px -9px rgba(138, 138, 138, 0.7);
+			h3 {
+				font-size: 1.5rem;
+				color: $black;
+				margin-bottom: 2.5rem;
+			}
+			h6 {
+				color: $agrey;
+				margin-bottom: 0.5rem;
+			}
+			span {
+				margin-bottom: 1rem;
+				display: block;
+				color: #a5a5a5;
+				font-weight: 300;
+				&:nth-of-type(4), &:nth-of-type(5) {
+					margin: 0;
+				}
+				&:nth-of-type(4) {
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
+	}
+	// Footer
+	footer {
+		background: $agrey;
+		.grid {
+			display: flex;
+			flex-wrap: wrap;
+			.col {
+				width: 25%;
+				padding: 2.5rem;
+				min-width: 300px;
+				&.col-1 {
+					display: flex;
+					flex-direction: column;
+					.logo {
+						color: white;
+						margin-bottom: 1rem;
+					}
+					p {
+						line-height: 1.5;
+						color: #9e9e9e;
+						font-size: 0.825rem;
+						margin-bottom: 1rem;
+					}
+					.socials {
+						display: flex;
+						i {
+							height: 35px;
+							width: 35px;
+							padding: 0.5rem;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							background: black;
+							border-radius: 50%;
+							color: white;
+							margin-right: 0.5rem;
+							font-size: 0.825rem;
+							&:last-of-type() {
+								margin: 0;
+							}
+						}
+					}
+				}
+				&.col-2 {
+					h3 {
+						color: white;
+						margin-bottom: 1rem;
+					}
+					.links {
+						display: flex;
+						flex-direction: column;
+						span {
+							color: #9e9e9e;
+							margin-bottom: 0.5rem;
+							font-size: 0.825rem;
+							&:last-of-type() {
+								margin: 0;
+							}
+						}
+					}
+				}
+				&.col-3 {
+					h3 {
+						color: white;
+						margin-bottom: 1rem;
+					}
+					.posts {
+						display: flex;
+						flex-direction: column;
+						.post {
+							margin-bottom: 1rem;
+							position: relative;
+							i {
+								color: $agreen;
+								position: absolute;
+								top: 2px;
+							}
+							p {
+								font-size: 0.825rem;
+								color: #9e9e9e;
+								line-height: 1.5;
+								margin-bottom: 0.5rem;
+								padding-left: 1.5rem;
+								b {
+									font-weight: 600;
+									color: white;
+								}
+							}
+							span {
+								color: white;
+								font-size: 0.825rem;
+							}
+						}
+					}
+				}
+				&.col-4 {
+					h3 {
+						color: white;
+						margin-bottom: 1rem;
+					}
+					.posts {
+						display: grid;
+						grid-template-columns: 75px 75px 75px;
+						grid-gap: 0.5rem;
+						.post {
+							height: 75px;
+							background-size: cover !important;
+							background-position: center !important;
+							background-repeat: no-repeat;
+							width: 75px;
+							&.post-1 {
+								background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+							}
+							&.post-2 {
+								background-image: url('http://www.clean2sparkle.com/admin/images/slider/image20180523082713.jpg');
+							}
+							&.post-3 {
+								background: url('https://data.whicdn.com/images/56044769/large.jpg');
+							}
+							&.post-4 {
+								background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+							}
+							&.post-5 {
+								background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+							}
+							&.post-6 {
+								background-image: url('https://zanimmobiliare.it/images/resource/image-3.jpg');
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

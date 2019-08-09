@@ -1,0 +1,1212 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #9898db;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#app nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem;
+}
+
+#app nav .logo {
+  color: #1b1b1b;
+}
+
+#app nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#app nav .links ul.page-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 3rem 0 0;
+}
+
+#app nav .links ul.page-links li {
+  color: #5c5c5c;
+  text-transform: uppercase;
+  margin-right: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+#app nav .links ul.page-links li.active {
+  color: #7BCB33;
+  border-bottom: 2px solid #7BCB33;
+}
+
+#app nav .links ul.page-links li:last-of-type {
+  margin: 0;
+}
+
+#app nav .links ul.icon-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#app nav .links ul.icon-links li {
+  border-left: 1px solid #d8d8d8;
+  padding: 0 1rem;
+}
+
+#app nav .links ul.icon-links li i {
+  font-size: 0.825rem;
+  color: #5c5c5c;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#app {
+  background: white;
+}
+
+#app #preview {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+#app #preview main {
+  background-image: url("https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 5.5rem);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+#app #preview main .details {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  background: white;
+  border-radius: 0 12rem 12rem 0;
+  padding: 2rem 2.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0px 0px 0px 23px rgba(179, 179, 179, 0.2);
+  box-shadow: 0px 0px 0px 23px rgba(179, 179, 179, 0.2);
+}
+
+#app #preview main .details h1 {
+  margin-bottom: 0.825rem;
+  color: #1b1b1b;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+#app #preview main .details p {
+  color: #262626;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+#app #preview main .details .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 1.5rem;
+}
+
+#app #preview main .details .info .col {
+  border-right: 1px solid #d8d8d8;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app #preview main .details .info .col:first-of-type {
+  padding: 0 1.5rem 0 0;
+}
+
+#app #preview main .details .info .col:last-of-type {
+  border: none;
+  padding: none;
+}
+
+#app #preview main .details .info .col h6 {
+  margin-bottom: 0.5rem;
+  color: #7BCB33;
+  font-size: 1.825rem;
+}
+
+#app #preview main .details .info .col span {
+  color: #262626;
+  font-weight: 300;
+}
+
+#app #preview main .details h5 {
+  font-style: italic;
+  color: #1b1b1b;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+#app #preview .preview-boxes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  -ms-grid-rows: 250px;
+      grid-template-rows: 250px;
+}
+
+#app #preview .preview-boxes .pic {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  position: relative;
+}
+
+#app #preview .preview-boxes .pic.one {
+  background: url("http://italstroy.ru/800/600/http/prointerior.info/wp-content/uploads/eco_22.jpg");
+}
+
+#app #preview .preview-boxes .pic.two {
+  background: url("https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg");
+}
+
+#app #preview .preview-boxes .pic.three {
+  background: url("https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg");
+}
+
+#app #preview .preview-boxes .pic .room-type {
+  background: #7BCB33;
+  position: absolute;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+  border-radius: 0 0 0 1rem;
+}
+
+#app #preview .preview-boxes .pic .room-type i {
+  color: white;
+}
+
+#app #preview .preview-boxes .pic .details {
+  background: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 45%;
+  position: absolute;
+}
+
+#app #preview .preview-boxes .pic .details .text {
+  position: absolute;
+  bottom: 0;
+  padding: 1.5rem;
+}
+
+#app #preview .preview-boxes .pic .details .text h3 {
+  color: white;
+  margin-bottom: 0.25rem;
+  font-weight: 300;
+}
+
+#app #preview .preview-boxes .pic .details .text h6 {
+  color: white;
+  margin-bottom: 0.825rem;
+  font-weight: 300;
+  font-size: 0.825rem;
+}
+
+#app #preview .preview-boxes .pic .details .text h6 b {
+  font-weight: 600;
+  color: white;
+}
+
+#app #preview .preview-boxes .pic .details .text a {
+  color: #7BCB33;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#app #summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 2.5rem;
+}
+
+#app #summary summary {
+  width: 50%;
+  padding-right: 2.5rem;
+}
+
+#app #summary summary h2 {
+  font-size: 2.5rem;
+  padding-bottom: 2.5rem;
+  color: #1b1b1b;
+}
+
+#app #summary summary p {
+  padding-bottom: 3.5rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #262626;
+}
+
+#app #summary summary a {
+  color: #7BCB33;
+  border: 2px solid #7BCB33;
+  padding: 0.825rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+#app #summary .rooms {
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33%)[3];
+      grid-template-columns: repeat(3, 33%);
+  padding-left: 2.5rem;
+}
+
+#app #summary .rooms .room {
+  border-left: 1px solid #d8d8d8;
+  border-top: 1px solid #d8d8d8;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app #summary .rooms .room:nth-child(3), #app #summary .rooms .room:nth-child(6) {
+  border-right: 1px solid #d8d8d8;
+}
+
+#app #summary .rooms .room:nth-child(4), #app #summary .rooms .room:nth-child(5), #app #summary .rooms .room:nth-child(6) {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+#app #summary .rooms .room i {
+  margin-bottom: 0.825rem;
+  color: #7BCB33;
+}
+
+#app #summary .rooms .room p {
+  margin-bottom: 0.825rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #262626;
+}
+
+#app #summary .rooms .room span {
+  font-size: 2rem;
+  color: #1b1b1b;
+}
+
+#app #features {
+  background: #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#app #features .carousel {
+  width: 50%;
+  background-image: url("https://zanimmobiliare.it/images/resource/image-3.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  position: relative;
+}
+
+#app #features .carousel .carousel-controller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  bottom: 1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app #features .carousel .carousel-controller div {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: white;
+  margin-right: 1rem;
+}
+
+#app #features .carousel .carousel-controller div:last-of-type {
+  margin: 0;
+}
+
+#app #features .carousel .carousel-controller div.active {
+  background: #7BCB33;
+}
+
+#app #features .features {
+  width: 50%;
+  padding: 5rem;
+}
+
+#app #features .features .steps {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+#app #features .features .steps .line {
+  width: calc(100% - 33%);
+  position: absolute;
+  background: #363636;
+  height: 1px;
+  top: 25%;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#app #features .features .steps .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+#app #features .features .steps .step.active h3 {
+  background: #7BCB33;
+  border-color: transparent;
+  color: white;
+}
+
+#app #features .features .steps .step.active span {
+  color: #7BCB33;
+}
+
+#app #features .features .steps .step h3 {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #363636;
+  background: #1b1b1b;
+  color: #d8d8d8;
+  font-weight: 400;
+}
+
+#app #features .features .steps .step span {
+  color: #d8d8d8;
+  font-weight: 300;
+}
+
+#app #features .features .info h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#app #features .features .info p {
+  color: #d8d8d8;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+#app #features .features .info ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1rem;
+  list-style: none;
+}
+
+#app #features .features .info ul li {
+  color: #d8d8d8;
+  font-weight: 600;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app #features .features .info ul li::before {
+  content: "\2022";
+  color: #7BCB33;
+  /* Change the color */
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#app #gallery {
+  padding: 5rem 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#app #gallery .gallery-options {
+  width: 30%;
+}
+
+#app #gallery .gallery-options h1 {
+  color: #1b1b1b;
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+#app #gallery .gallery-options .controller {
+  margin-bottom: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app #gallery .gallery-options .controller span {
+  padding: 1rem;
+  border-left: 2px solid #d8d8d8;
+  color: #262626;
+  font-weight: 300;
+}
+
+#app #gallery .gallery-options .controller span.active {
+  border-color: #7BCB33;
+  color: #7BCB33;
+}
+
+#app #gallery .gallery-options a {
+  color: #7BCB33;
+  border: 2px solid #7BCB33;
+  padding: 0.825rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+#app #gallery .gallery-images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 150px 150px 150px 150px;
+      grid-template-rows: 150px 150px 150px 150px;
+  grid-gap: 1.5rem;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 0 0 auto;
+}
+
+#app #gallery .gallery-images .image {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 100%;
+}
+
+#app #gallery .gallery-images .image:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  background: url("https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg");
+}
+
+#app #gallery .gallery-images .image:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  background-image: url("http://www.clean2sparkle.com/admin/images/slider/image20180523082713.jpg");
+}
+
+#app #gallery .gallery-images .image:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  background: url("https://data.whicdn.com/images/56044769/large.jpg");
+}
+
+#app #gallery .gallery-images .image:nth-child(4) {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  background-image: url("https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg");
+}
+
+#app #gallery .gallery-images .image:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  background: url("https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg");
+}
+
+#app #contact {
+  background: #7BCB33;
+  padding: 5rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+#app #contact .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+#app #contact p {
+  line-height: 1.5;
+  color: #262626;
+  font-weight: 300;
+}
+
+#app #contact .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app #contact .link a {
+  color: #7BCB33;
+  background: white;
+  padding: 0.825rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+#app #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem 0;
+  background: #f8f8f8;
+}
+
+#app #about h1 {
+  font-size: 2.5rem;
+  color: #1b1b1b;
+  margin-bottom: 5rem;
+}
+
+#app #about .agent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#app #about .agent .agent-image {
+  width: calc(45% - 2.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#app #about .agent .agent-image img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#app #about .agent .agent-info {
+  width: calc(55% - 2.5rem);
+  padding-left: 2.5rem;
+}
+
+#app #about .agent .agent-info h6 {
+  color: #1b1b1b;
+  font-size: 1.5rem;
+  margin-bottom: 0.825rem;
+}
+
+#app #about .agent .agent-info p.role {
+  color: #c4c4c4;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+#app #about .agent .agent-info p.desc {
+  margin-bottom: 1.5rem;
+  color: #262626;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+#app #about .agent .agent-info p.phone {
+  font-weight: 300;
+  color: #1b1b1b;
+  margin-bottom: 0.25rem;
+}
+
+#app #about .agent .agent-info p.email {
+  font-weight: 300;
+  color: #1b1b1b;
+  margin-bottom: 1.5rem;
+}
+
+#app #about .agent .agent-info .socials {
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#app #about .agent .agent-info .socials i {
+  color: #262626;
+}
+
+#app #about .agent .agent-info a {
+  color: #7BCB33;
+  border: 2px solid #7BCB33;
+  padding: 0.825rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+#app #blog {
+  padding: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app #blog h1 {
+  font-size: 2.5rem;
+  color: #1b1b1b;
+  margin-bottom: 3.5rem;
+}
+
+#app #blog .posts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  max-width: 900px;
+  margin-bottom: 3.5rem;
+}
+
+#app #blog .posts .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app #blog .posts .post.one .image {
+  background: url("https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg");
+}
+
+#app #blog .posts .post.two .image {
+  background: url("https://data.whicdn.com/images/56044769/large.jpg");
+}
+
+#app #blog .posts .post.three .image {
+  background: url("https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg");
+}
+
+#app #blog .posts .post:nth-child(even) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+#app #blog .posts .post .image {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+#app #blog .posts .post .info {
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  background: #f8f8f8;
+}
+
+#app #blog .posts .post .info h4 {
+  font-size: 1.25rem;
+  color: #575757;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+#app #blog .posts .post .info span {
+  color: #b8b8b8;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  font-size: 0.825rem;
+}
+
+#app #blog .posts .post .info p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #262626;
+  font-weight: 300;
+  font-size: 0.825rem;
+}
+
+#app #blog .posts .post .info a {
+  border: none;
+  padding: 0;
+}
+
+#app #blog a {
+  color: #7BCB33;
+  border: 2px solid #7BCB33;
+  padding: 0.825rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+#app #map {
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url("../images/map.png");
+  min-height: 60vh;
+  position: relative;
+}
+
+#app #map .location {
+  background: white;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 2.5rem;
+  -webkit-box-shadow: 0px 0px 24px -9px rgba(138, 138, 138, 0.7);
+  box-shadow: 0px 0px 24px -9px rgba(138, 138, 138, 0.7);
+}
+
+#app #map .location h3 {
+  font-size: 1.5rem;
+  color: #1b1b1b;
+  margin-bottom: 2.5rem;
+}
+
+#app #map .location h6 {
+  color: #262626;
+  margin-bottom: 0.5rem;
+}
+
+#app #map .location span {
+  margin-bottom: 1rem;
+  display: block;
+  color: #a5a5a5;
+  font-weight: 300;
+}
+
+#app #map .location span:nth-of-type(4), #app #map .location span:nth-of-type(5) {
+  margin: 0;
+}
+
+#app #map .location span:nth-of-type(4) {
+  margin-bottom: 0.5rem;
+}
+
+#app footer {
+  background: #262626;
+}
+
+#app footer .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#app footer .grid .col {
+  width: 25%;
+  padding: 2.5rem;
+  min-width: 300px;
+}
+
+#app footer .grid .col.col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app footer .grid .col.col-1 .logo {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#app footer .grid .col.col-1 p {
+  line-height: 1.5;
+  color: #9e9e9e;
+  font-size: 0.825rem;
+  margin-bottom: 1rem;
+}
+
+#app footer .grid .col.col-1 .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#app footer .grid .col.col-1 .socials i {
+  height: 35px;
+  width: 35px;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: black;
+  border-radius: 50%;
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 0.825rem;
+}
+
+#app footer .grid .col.col-1 .socials i:last-of-type() {
+  margin: 0;
+}
+
+#app footer .grid .col.col-2 h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#app footer .grid .col.col-2 .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app footer .grid .col.col-2 .links span {
+  color: #9e9e9e;
+  margin-bottom: 0.5rem;
+  font-size: 0.825rem;
+}
+
+#app footer .grid .col.col-2 .links span:last-of-type() {
+  margin: 0;
+}
+
+#app footer .grid .col.col-3 h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#app footer .grid .col.col-3 .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app footer .grid .col.col-3 .posts .post {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#app footer .grid .col.col-3 .posts .post i {
+  color: #7BCB33;
+  position: absolute;
+  top: 2px;
+}
+
+#app footer .grid .col.col-3 .posts .post p {
+  font-size: 0.825rem;
+  color: #9e9e9e;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+#app footer .grid .col.col-3 .posts .post p b {
+  font-weight: 600;
+  color: white;
+}
+
+#app footer .grid .col.col-3 .posts .post span {
+  color: white;
+  font-size: 0.825rem;
+}
+
+#app footer .grid .col.col-4 h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#app footer .grid .col.col-4 .posts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75px 75px 75px;
+      grid-template-columns: 75px 75px 75px;
+  grid-gap: 0.5rem;
+}
+
+#app footer .grid .col.col-4 .posts .post {
+  height: 75px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  width: 75px;
+}
+
+#app footer .grid .col.col-4 .posts .post.post-1 {
+  background: url("https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg");
+}
+
+#app footer .grid .col.col-4 .posts .post.post-2 {
+  background-image: url("http://www.clean2sparkle.com/admin/images/slider/image20180523082713.jpg");
+}
+
+#app footer .grid .col.col-4 .posts .post.post-3 {
+  background: url("https://data.whicdn.com/images/56044769/large.jpg");
+}
+
+#app footer .grid .col.col-4 .posts .post.post-4 {
+  background-image: url("https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg");
+}
+
+#app footer .grid .col.col-4 .posts .post.post-5 {
+  background: url("https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg");
+}
+
+#app footer .grid .col.col-4 .posts .post.post-6 {
+  background-image: url("https://zanimmobiliare.it/images/resource/image-3.jpg");
+}
+/*# sourceMappingURL=main.css.map */
