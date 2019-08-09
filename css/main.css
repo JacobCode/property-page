@@ -213,8 +213,8 @@ table {
   }
   #app nav .nav-menu .logo {
     color: #d4d4d4;
-    margin-bottom: 3.5rem;
-    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
   }
   #app nav .nav-menu ul {
     display: -webkit-box;

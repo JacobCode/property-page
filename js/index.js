@@ -1,14 +1,10 @@
-
-
-
-
-
 const init = function () {
+	// When clicking nav-toggler, open menu
 	document.querySelector('.nav-toggler').addEventListener('click', function () {
-		console.log("CLICK")
 		this.classList.toggle('open');
 		document.querySelector('.nav-menu').classList.toggle('open');
 	})
+	// If menu is open and the user scrolls, close menu
 	document.addEventListener('scroll', function() {
 		if (document.querySelector('.nav-toggler').classList[1] !== undefined && document.querySelector('.nav-menu').classList[1] !== undefined) {
 			document.querySelector('.nav-toggler').classList.remove('open');
