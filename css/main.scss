@@ -428,11 +428,15 @@ body {
 		padding: 5rem 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
 		.logo {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			color: white;
+			img {
+
+			}
 		}
 		p {
 			line-height: 1.5;
@@ -470,7 +474,7 @@ body {
 			display: flex;
 			flex-direction: row;
 			.agent-image {
-				width: calc(45% - 2.5rem);
+				width: calc(45% - 3.5rem);
 				display: flex;
 				justify-content: flex-end;
 				img {
@@ -480,8 +484,8 @@ body {
 				}
 			}
 			.agent-info {
-				width: calc(55% - 2.5rem);
-				padding-left: 2.5rem;
+				width: calc(55% - 3.5rem);
+				padding-left: 3.5rem;
 				h6 {
 					color: $black;
 					font-size: 1.5rem;
@@ -498,6 +502,7 @@ body {
 						color: $agrey;
 						line-height: 1.5;
 						font-weight: 300;
+						max-width: 1200px;
 					}
 					&.phone {
 						font-weight: 300;
@@ -675,6 +680,9 @@ body {
 					.logo {
 						color: white;
 						margin-bottom: 1rem;
+						img {
+							max-height: 75px;
+						}
 					}
 					p {
 						line-height: 1.5;
@@ -708,8 +716,8 @@ body {
 						margin-bottom: 1rem;
 					}
 					.links {
-						display: flex;
-						flex-direction: column;
+						display: grid;
+						grid-template-columns: 1fr 1fr;
 						span {
 							color: #9e9e9e;
 							margin-bottom: 0.5rem;
