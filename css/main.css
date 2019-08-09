@@ -60,7 +60,7 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -92,15 +92,21 @@ table {
 }
 
 #app nav .links ul.page-links li {
-  color: #5c5c5c;
   text-transform: uppercase;
   margin-right: 1rem;
   padding-bottom: 0.25rem;
 }
 
+#app nav .links ul.page-links li a {
+  color: #5c5c5c;
+}
+
 #app nav .links ul.page-links li.active {
-  color: #7BCB33;
   border-bottom: 2px solid #7BCB33;
+}
+
+#app nav .links ul.page-links li.active a {
+  color: #7BCB33;
 }
 
 #app nav .links ul.page-links li:last-of-type {
@@ -214,7 +220,6 @@ table {
   #app nav .nav-menu ul li {
     margin-bottom: 2.5rem;
     font-size: 1.5rem;
-    color: #8a8a8a;
     font-weight: 300;
     padding: 0 0 0.25rem 0;
     border-bottom: 2px solid transparent;
@@ -223,11 +228,16 @@ table {
     cursor: pointer;
   }
   #app nav .nav-menu ul li.active {
-    color: #7BCB33;
     border-color: #7BCB33;
+  }
+  #app nav .nav-menu ul li.active a {
+    color: #7BCB33;
   }
   #app nav .nav-menu ul li:hover {
     color: #d4d4d4;
+  }
+  #app nav .nav-menu ul li a {
+    color: #8a8a8a;
   }
   #app nav .nav-menu .divider {
     height: 1px;
@@ -237,6 +247,15 @@ table {
   #app nav .nav-menu.open {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@media (max-width: 576px) {
+  #app nav .nav-menu {
+    padding: 1rem;
+  }
+  #app nav .nav-menu ul li {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1416,7 +1435,7 @@ body {
   }
   #app #contact .text {
     margin-bottom: 1.5rem;
-    width: 80%;
+    width: 90%;
     text-align: center;
   }
   #app #about h1 {
