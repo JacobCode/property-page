@@ -61,6 +61,17 @@ table {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app nav .nav-toggler {
+  display: none;
+}
+
+#app nav .nav-menu {
+  display: none;
 }
 
 #app nav .logo {
@@ -112,8 +123,125 @@ table {
   color: #5c5c5c;
 }
 
+#app nav .links ul.icon-links li:last-of-type {
+  padding: 0 0 0 1rem;
+}
+
+@media (max-width: 768px) {
+  #app nav .links {
+    display: none;
+  }
+  #app nav .nav-toggler {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 24px;
+    width: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #app nav .nav-toggler span {
+    height: 2px;
+    width: 100%;
+    background: black;
+    display: block;
+    margin-bottom: 0.5rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  #app nav .nav-toggler span:nth-of-type(3) {
+    margin-bottom: 0px;
+  }
+  #app nav .nav-toggler.open {
+    position: relative;
+    height: 24px;
+  }
+  #app nav .nav-toggler.open span:nth-of-type(1) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+  }
+  #app nav .nav-toggler.open span:nth-of-type(2) {
+    opacity: 0;
+    top: 50%;
+    position: absolute;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+  #app nav .nav-toggler.open span:nth-of-type(3) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+  }
+  #app nav .nav-menu {
+    display: initial;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 60%;
+    background: #262626;
+    padding: 1.5rem;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  #app nav .nav-menu .logo {
+    color: #d4d4d4;
+    margin-bottom: 3.5rem;
+    padding: 1rem 1rem 0 1rem;
+  }
+  #app nav .nav-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 1rem;
+  }
+  #app nav .nav-menu ul li {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    color: #8a8a8a;
+    font-weight: 300;
+    padding: 0 0 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  #app nav .nav-menu ul li.active {
+    color: #7BCB33;
+    border-color: #7BCB33;
+  }
+  #app nav .nav-menu ul li:hover {
+    color: #d4d4d4;
+  }
+  #app nav .nav-menu .divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+  }
+  #app nav .nav-menu.open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 body {
-  width: 100vw;
+  min-width: 100vw;
   overflow-x: hidden;
 }
 
@@ -122,7 +250,7 @@ body {
 }
 
 #app #preview {
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.5rem;
 }
 
 #app #preview main {
@@ -452,7 +580,7 @@ body {
 
 #app #features .features {
   width: 50%;
-  padding: 5rem;
+  padding: 5rem 2.5rem;
 }
 
 #app #features .features .steps {
@@ -530,6 +658,7 @@ body {
 #app #features .features .steps .step span {
   color: #d8d8d8;
   font-weight: 300;
+  font-size: 0.925rem;
 }
 
 #app #features .features .info h1 {
@@ -552,6 +681,7 @@ body {
       grid-template-columns: 1fr 1fr;
   grid-row-gap: 1rem;
   list-style: none;
+  grid-column-gap: 0.5rem;
 }
 
 #app #features .features .info ul li {
@@ -564,6 +694,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 1.2;
 }
 
 #app #features .features .info ul li::before {
@@ -1208,5 +1339,237 @@ body {
 
 #app footer .grid .col.col-4 .posts .post.post-6 {
   background-image: url("https://zanimmobiliare.it/images/resource/image-3.jpg");
+}
+
+@media (max-width: 768px) {
+  #app #preview main .details {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #app #preview .preview-boxes {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 250px 250px 250px;
+        grid-template-rows: 250px 250px 250px;
+  }
+  #app #summary {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #app #summary summary {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+  #app #summary .rooms {
+    width: 100%;
+    padding: 0;
+  }
+  #app #features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #app #features .carousel {
+    height: 400px;
+    width: 100%;
+  }
+  #app #features .features {
+    width: 100%;
+  }
+  #app #gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #app #gallery .gallery-options {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  #app #gallery .gallery-images {
+    width: 100%;
+  }
+  #app #contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #app #contact .logo {
+    margin-bottom: 1.5rem;
+  }
+  #app #contact .text {
+    margin-bottom: 1.5rem;
+    width: 80%;
+    text-align: center;
+  }
+  #app #about h1 {
+    text-align: center;
+  }
+  #app #about .agent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #app #about .agent .agent-image {
+    width: 100%;
+  }
+  #app #about .agent .agent-image img {
+    margin: 0 auto 2.5rem;
+  }
+  #app #about .agent .agent-info {
+    width: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #app #about .agent .agent-info p.desc {
+    width: 80%;
+    text-align: center;
+  }
+  #app #blog .posts {
+    padding: 0 1.5rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #app #blog .posts .post:nth-of-type(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  #app #preview {
+    padding: 0;
+  }
+  #app #preview main {
+    height: calc(100vh - 4.5rem);
+  }
+  #app #preview main .details {
+    padding: 1rem;
+  }
+  #app #preview main .details .info .col {
+    padding: 0 1rem;
+  }
+  #app #preview main .details .info .col:first-of-type {
+    padding: 0 1rem 0 0;
+  }
+  #app #preview main .details .info .col:last-of-type {
+    border: none;
+    padding: none;
+  }
+  #app #preview main .details h5 {
+    font-size: 2rem;
+  }
+  #app #summary {
+    padding: 5rem 1.5rem;
+  }
+  #app #summary summary h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  #app #summary .rooms .room {
+    height: 125px;
+  }
+  #app #summary .rooms .room span {
+    font-size: 1.5rem;
+  }
+  #app #features .carousel {
+    height: 300px;
+  }
+  #app #features .features {
+    padding: 3.5rem 1.5rem;
+  }
+  #app #features .features .steps {
+    margin-bottom: 1.5rem;
+  }
+  #app #features .features .steps .line {
+    top: 15%;
+  }
+  #app #features .features .steps .step span {
+    font-size: 0.825rem;
+    text-align: center;
+    height: 50px;
+  }
+  #app #features .features .info ul {
+    grid-column-gap: 0.5rem;
+  }
+  #app #features .features .info ul li {
+    line-height: 1.4;
+    font-size: 0.825rem;
+  }
+  #app #gallery {
+    padding: 5rem 1.5rem;
+  }
+  #app #gallery .gallery-images {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (200px)[5];
+        grid-template-rows: repeat(5, 200px);
+  }
+  #app #gallery .gallery-images .image {
+    grid-row: initial !important;
+    grid-column: initial !important;
+  }
+  #app #about h1 {
+    font-size: 2rem;
+  }
+  #app #blog h1 {
+    font-size: 2rem;
+  }
+  #app #map .location {
+    padding: 1rem;
+  }
+  #app #map .location h3 {
+    margin-bottom: 1.5rem;
+  }
+  #app footer {
+    padding: 3.5rem 0;
+  }
+  #app footer .grid .col {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  #app footer .grid .col.col-4 .posts {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #app footer .grid .col.col-4 .posts .post {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

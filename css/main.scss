@@ -3,7 +3,7 @@
 @import './layout';
 
 body {
-	width: 100vw;
+	min-width: 100vw;
 	overflow-x: hidden;
 }
 
@@ -11,7 +11,7 @@ body {
 	background: white;
 	// Preview Section
 	#preview {
-		padding: 0 1.5rem 1.5rem 1.5rem;
+		padding: 0 1.5rem;
 		main {
 			background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
 			background-size: cover;
@@ -253,7 +253,7 @@ body {
 		}
 		.features {
 			width: 50%;
-			padding: 5rem;
+			padding: 5rem 2.5rem;
 			.steps {
 				display: grid;
 				grid-template-columns: 1fr 1fr 1fr;
@@ -303,6 +303,7 @@ body {
 					span {
 						color: $lightGrey;
 						font-weight: 300;
+						font-size: 0.925rem;
 					}
 				}
 			}
@@ -323,12 +324,14 @@ body {
 					grid-template-columns: 1fr 1fr;
 					grid-row-gap: 1rem;
 					list-style: none;
+					grid-column-gap: 0.5rem;
 					li {
 						color: $lightGrey;
 						font-weight: 600;
 						font-size: 1rem;
 						display: flex;
 						align-items: center;
+						line-height: 1.2;
 					}
 					li::before {
 						content: "\2022";
@@ -783,6 +786,245 @@ body {
 							}
 							&.post-6 {
 								background-image: url('https://zanimmobiliare.it/images/resource/image-3.jpg');
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Media Queries
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+	#app {
+		#preview {
+			main {
+				.details {
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.preview-boxes {
+				grid-template-columns: 1fr;
+				grid-template-rows: 250px 250px 250px;
+			}
+		}
+		#summary {
+			flex-direction: column;
+			summary {
+				width: 100%;
+				padding: 0;
+				margin-bottom: 5rem;
+			}
+			.rooms {
+				width: 100%;
+				padding: 0;
+			}
+		}
+		#features {
+			flex-direction: column;
+			.carousel {
+				height: 400px;
+				width: 100%;
+			}
+			.features {
+				width: 100%;
+			}
+		}
+		#gallery {
+			flex-direction: column;
+			.gallery-options {
+				width: 100%;
+				margin-bottom: 5rem;
+			}
+			.gallery-images {
+				width: 100%;
+			}
+		}
+		#contact {
+			display: flex;
+			flex-direction: column;
+			padding-right: 1.5rem;
+			padding-left: 1.5rem;
+			justify-content: center;
+			align-items: center;
+			.logo {
+				margin-bottom: 1.5rem;
+			}
+			.text {
+				margin-bottom: 1.5rem;
+				width: 80%;
+				text-align: center;
+			}
+			.link {
+
+			}
+		}
+		#about {
+			h1 {
+				text-align: center;
+			}
+			.agent {
+				flex-direction: column;
+				.agent-image {
+					width: 100%;
+					img {
+						margin: 0 auto 2.5rem;
+					}
+				}
+				.agent-info {
+					width: 100%;
+					padding: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					p.desc {
+						width: 80%;
+						text-align: center;
+					}
+				}
+			}
+		}
+		#blog {
+			.posts {
+				padding: 0 1.5rem;
+				grid-template-columns: 1fr;
+				flex-direction: column;
+				.post:nth-of-type(even) {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+	#app {
+		#preview {
+			padding: 0;
+			main {
+				height: calc(100vh - 4.5rem);
+				.details {
+					padding: 1rem;
+					h1 {
+
+					}
+					p {
+
+					}
+					.info {
+						.col {
+							padding: 0 1rem;
+							&:first-of-type {
+								padding: 0 1rem 0 0;
+							}
+							&:last-of-type {
+								border: none;
+								padding: none;
+							}
+						}
+					}
+					h5 {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+		#summary {
+			padding: 5rem 1.5rem;
+			summary {
+				h2 {
+					font-size: 2rem;
+					line-height: 1.2;
+				}
+			}
+			.rooms {
+				.room {
+					height: 125px;
+					span {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+		#features {
+			.carousel {
+				height: 300px;
+			}
+			.features {
+				padding: 3.5rem 1.5rem;
+				.steps {
+					margin-bottom: 1.5rem;
+					.line {
+						top: 15%;
+					}
+					.step {
+						span {
+							font-size: 0.825rem;
+							text-align: center;
+							height: 50px;
+						}
+					}
+				}
+				.info {
+					ul {
+						grid-column-gap: 0.5rem;
+						li {
+							line-height: 1.4;
+							font-size: 0.825rem;
+						}
+					}
+				}
+			}
+		}
+		#gallery {
+			padding: 5rem 1.5rem;
+			.gallery-options {
+
+			}
+			.gallery-images {
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(5, 200px);
+				.image {
+					grid-row: initial !important;
+					grid-column: initial !important;
+				}
+			}
+		}
+		#about {
+			h1 {
+				font-size: 2rem;
+			}
+		}
+		#blog {
+			h1 {
+				font-size: 2rem;
+			}
+		}
+		#map {
+			.location {
+				padding: 1rem;
+				h3 {
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+		footer {
+			padding: 3.5rem 0;
+			.grid {
+				.col {
+					width: 100%;
+					padding: 1.5rem;
+					&.col-4 {
+						.posts {
+							grid-template-columns: 1fr 1fr 1fr;
+							.post {
+								width: 100%;
 							}
 						}
 					}
