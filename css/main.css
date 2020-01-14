@@ -834,7 +834,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
-  background: url("https://data.whicdn.com/images/56044769/large.jpg");
+  background: url("https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 #app #gallery .gallery-images .image:nth-child(4) {
@@ -1072,7 +1072,7 @@ body {
 }
 
 #app #blog .posts .post.two .image {
-  background: url("https://data.whicdn.com/images/56044769/large.jpg");
+  background: url("https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 #app #blog .posts .post.three .image {
@@ -1362,7 +1362,7 @@ body {
 }
 
 #app footer .grid .col.col-4 .posts .post.post-3 {
-  background: url("https://data.whicdn.com/images/56044769/large.jpg");
+  background: url("https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 #app footer .grid .col.col-4 .posts .post.post-4 {
