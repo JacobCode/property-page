@@ -13,7 +13,8 @@ body {
 	#preview {
 		padding: 0 1.5rem;
 		main {
-			background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+      background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+      background-color: #7bcb33;
 			background-size: cover;
 			background-position: center;
 			height: calc(100vh - 5.5rem);
@@ -37,7 +38,7 @@ body {
 					font-size: 2rem;
 				}
 				p {
-					color: $agrey;
+					color: $grey;
 					font-weight: 300;
 					margin-bottom: 2rem;
 				}
@@ -61,11 +62,11 @@ body {
 						}
 						h6 {
 							margin-bottom: 0.5rem;
-							color: $agreen;
+							color: $green;
 							font-size: 1.825rem;
 						}
 						span {
-							color: $agrey;
+							color: $grey;
 							font-weight: 300;
 						}
 					}
@@ -89,16 +90,19 @@ body {
 				background-position: center !important;
 				position: relative;
 				&.one {
-					background: url('http://italstroy.ru/800/600/http/prointerior.info/wp-content/uploads/eco_22.jpg');
+          background-image: url('http://italstroy.ru/800/600/http/prointerior.info/wp-content/uploads/eco_22.jpg');
+          background-color: #7bcb33;
 				}
 				&.two {
-					background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+          background-image: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+          background-color: #7bcb33;
 				}
 				&.three {
-					background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+          background-image: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+          background-color: #7bcb33;
 				}
 				.room-type {
-					background: $agreen;
+					background: $green;
 					position: absolute;
 					right: 0;
 					height: 50px;
@@ -139,7 +143,7 @@ body {
 							}
 						}
 						a {
-							color: $agreen;
+							color: $green;
 							font-size: 0.75rem;
 							text-transform: uppercase;
 							font-weight: 600;
@@ -167,11 +171,11 @@ body {
 				padding-bottom: 3.5rem;
 				line-height: 1.8;
 				font-weight: 300;
-				color: $agrey;
+				color: $grey;
 			}
 			a {
-				color: $agreen;
-				border: 2px solid $agreen;
+				color: $green;
+				border: 2px solid $green;
 				padding: 0.825rem 1rem;
 				text-transform: uppercase;
 				font-size: 0.825rem;
@@ -199,13 +203,13 @@ body {
 				}
 				i {
 					margin-bottom: 0.825rem;
-					color: $agreen;
+					color: $green;
 				}
 				p {
 					margin-bottom: 0.825rem;
 					font-size: 1.1rem;
 					font-weight: 300;
-					color: $agrey;
+					color: $grey;
 				}
 				span {
 					font-size: 2rem;
@@ -216,11 +220,12 @@ body {
 	}
 	// Features Section
 	#features {
-		background: $agrey;
+		background: $grey;
 		display: flex;
 		.carousel {
 			width: 50%;
-			background-image: url('https://zanimmobiliare.it/images/resource/image-3.jpg');
+      background-image: url('https://zanimmobiliare.it/images/resource/image-3.jpg');
+      background-color: #7bcb33;
 			background-size: cover;
 			background-position: center;
 			min-height: 100%;
@@ -246,7 +251,7 @@ body {
 						margin: 0;
 					}
 					&.active {
-						background: $agreen;
+						background: $green;
 					}
 				}
 			}
@@ -279,12 +284,12 @@ body {
 					z-index: 100;
 					&.active {
 						h3 {
-							background: $agreen;
+							background: $green;
 							border-color: transparent;
 							color: white;
 						}
 						span {
-							color: $agreen;
+							color: $green;
 						}
 					}
 					h3 {
@@ -335,7 +340,7 @@ body {
 					}
 					li::before {
 						content: "\2022";
-						color: $agreen;
+						color: $green;
 						/* Change the color */
 						font-weight: bold;
 						display: inline-block;
@@ -364,17 +369,17 @@ body {
 				span {
 					padding: 1rem;
 					border-left: 2px solid $lightGrey;
-					color: $agrey;
+					color: $grey;
 					font-weight: 300;
 					&.active {
-						border-color: $agreen;
-						color: $agreen;
+						border-color: $green;
+						color: $green;
 					}
 				}
 			}
 			a {
-				color: $agreen;
-				border: 2px solid $agreen;
+				color: $green;
+				border: 2px solid $green;
 				padding: 0.825rem 1rem;
 				text-transform: uppercase;
 				font-size: 0.825rem;
@@ -397,34 +402,39 @@ body {
 				&:nth-child(1) {
 					grid-row: 1 / 3;
 					grid-column: 1 / 2;
-					background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+          background-image: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+          background-color: #7bcb33;
 				}
 				&:nth-child(2) {
 					grid-row: 1 / 3;
 					grid-column: 2 / 4;
-					background-image: url('http://www.clean2sparkle.com/admin/images/slider/image20180523082713.jpg');
+          background-image: url('https://image.freepik.com/free-photo/modern-bedroom-decoration-parquet-wood-design-with-light-from-black-window-3d-rendering_62024-108.jpg');
+          background-color: #7bcb33;
 				}
 				&:nth-child(3) {
 					grid-row: 3 / 4;
 					grid-column: 1 / 2;
-					background: url('https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+          background-image: url('https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+          background-color: #7bcb33;
 				}
 				&:nth-child(4) {
 					grid-row: 4 / 5;
 					grid-column: 1 / 2;
-					background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+          background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+          background-color: #7bcb33;
 				}
 				&:nth-child(5) {
 					grid-row: 3 / 5;
 					grid-column: 2 / 4;
-					background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+          background-image: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+          background-color: #7bcb33;
 				}
 			}
 		}
 	}
 	// Contact Section
 	#contact {
-		background: $agreen;
+		background: $green;
 		padding: 5rem 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -440,7 +450,7 @@ body {
 		}
 		p {
 			line-height: 1.5;
-			color: $agrey;
+			color: $grey;
 			font-weight: 300;
 		}
 		.link {
@@ -448,8 +458,8 @@ body {
 			align-items: center;
 			justify-content: center;
 			a {
-				color: $agreen;
-				background: white;
+				color: $grey;
+        border: 2px solid $grey;
 				padding: 0.825rem 1rem;
 				text-transform: uppercase;
 				font-size: 0.825rem;
@@ -499,7 +509,7 @@ body {
 					}
 					&.desc {
 						margin-bottom: 1.5rem;
-						color: $agrey;
+						color: $grey;
 						line-height: 1.5;
 						font-weight: 300;
 						max-width: 1200px;
@@ -523,12 +533,12 @@ body {
 					width: 100px;
 					justify-content: space-between;
 					i {
-						color: $agrey;
+						color: $grey;
 					}
 				}
 				a {
-					color: $agreen;
-					border: 2px solid $agreen;
+					color: $green;
+					border: 2px solid $green;
 					padding: 0.825rem 1rem;
 					text-transform: uppercase;
 					font-size: 0.825rem;
@@ -559,17 +569,20 @@ body {
 				flex-direction: column;
 				&.one {
 					.image {
-						background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+            background-image: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+            background-color: #7bcb33;
 					}
 				}
 				&.two {
 					.image {
-						background: url('https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-image: url('https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-color: #7bcb33;
 					}
 				}
 				&.three {
 					.image {
-						background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+            background-image: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+            background-color: #7bcb33;
 					}
 				}
 				&:nth-child(even) {
@@ -603,7 +616,7 @@ body {
 					p {
 						margin-bottom: 1rem;
 						line-height: 1.5;
-						color: $agrey;
+						color: $grey;
 						font-weight: 300;
 						font-size: 0.825rem;
 					}
@@ -615,8 +628,8 @@ body {
 			}
 		}
 		a {
-			color: $agreen;
-			border: 2px solid $agreen;
+			color: $green;
+			border: 2px solid $green;
 			padding: 0.825rem 1rem;
 			text-transform: uppercase;
 			font-size: 0.825rem;
@@ -628,7 +641,8 @@ body {
 		background-size: cover !important;
 		background-position: center;
 		background-repeat: no-repeat;
-		background: url('../images/map.png');
+    background-image: url('../images/map.png');
+    background-color: #7bcb33;
 		min-height: 60vh;
 		position: relative;
 		.location {
@@ -647,7 +661,7 @@ body {
 				margin-bottom: 2.5rem;
 			}
 			h6 {
-				color: $agrey;
+				color: $grey;
 				margin-bottom: 0.5rem;
 			}
 			span {
@@ -666,7 +680,7 @@ body {
 	}
 	// Footer
 	footer {
-		background: $agrey;
+		background: $grey;
 		.grid {
 			display: flex;
 			flex-wrap: wrap;
@@ -740,7 +754,7 @@ body {
 							margin-bottom: 1rem;
 							position: relative;
 							i {
-								color: $agreen;
+								color: $green;
 								position: absolute;
 								top: 2px;
 							}
@@ -778,22 +792,28 @@ body {
 							background-repeat: no-repeat;
 							width: 75px;
 							&.post-1 {
-								background: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+                background-image: url('https://i.pinimg.com/originals/03/e9/81/03e98130d7bb4c1c1ecfae4f52b74ac8.jpg');
+                background-color: #7bcb33;
 							}
 							&.post-2 {
-								background-image: url('http://www.clean2sparkle.com/admin/images/slider/image20180523082713.jpg');
+                background-image: url('https://image.freepik.com/free-photo/modern-bedroom-decoration-parquet-wood-design-with-light-from-black-window-3d-rendering_62024-108.jpg');
+                background-color: #7bcb33;
 							}
 							&.post-3 {
-								background: url('https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+                background-image: url('https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+                background-color: #7bcb33;
 							}
 							&.post-4 {
-								background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+                background-image: url('https://www.topdom.ru/uploaded/article/modern-livingroom/96.jpg');
+                background-color: #7bcb33;
 							}
 							&.post-5 {
-								background: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+                background-image: url('https://tabrizwood.com/wp-content/uploads/2017/06/%D8%B5%D9%81%D8%AD%D9%87-%DA%A9%D8%A7%D8%A8%DB%8C%D9%86%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%A7%D8%AA.jpg');
+                background-color: #7bcb33;
 							}
 							&.post-6 {
-								background-image: url('https://zanimmobiliare.it/images/resource/image-3.jpg');
+                background-image: url('https://zanimmobiliare.it/images/resource/image-3.jpg');
+                background-color: #7bcb33;
 							}
 						}
 					}
